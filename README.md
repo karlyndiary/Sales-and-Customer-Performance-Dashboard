@@ -39,3 +39,6 @@ Represent the distribution of customers based on the number of orders they have 
 - Make the charts and graphs interactive, enabling users to filter data using the charts.
 #### Data Filters
 Allow users to filter data by product information like category and subcategory and by location information like region, state and city.
+
+## Reference 
+- [Data with Baraa](https://www.datawithbaraa.com/tableau/tableau-sales-project-thank-you/) 
