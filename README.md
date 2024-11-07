@@ -67,8 +67,23 @@ IF YEAR([Order Date]) = [Select Year] - 1 THEN [Sales] END
 ```
 (SUM([CY Sales]) - SUM([PY Sales]))/SUM([PY Sales])
 ```
+
 Change to percent -> Right-click on the calculated field -> Default Properties -> Number Format -> Percentage -> Remove Decimals -> OK
-- 
+
+Format the % Diff Sales -> Right-click -> Format -> ▲0.00%; ▼-0.00%;
+
+- Min/Max Sales
+```
+IF SUM([CY Sales]) = WINDOW_MAX(SUM([CY Sales]))
+THEN SUM([CY Sales])
+ELSEIF SUM([CY Sales]) = WINDOW_MIN(SUM([CY Sales]))
+THEN SUM([CY Sales])
+END
+```
+
+Under All in the Marks pane: Change the SUM([CY Sales]) to {SUM([CY Sales])} and [% Diff Sales] to {[% Diff Sales]} to return from revenue range to total revenue for the selected year
+
+-
 
 ## Reference 
 - [Data with Baraa](https://www.datawithbaraa.com/tableau/tableau-sales-project-thank-you/) 
