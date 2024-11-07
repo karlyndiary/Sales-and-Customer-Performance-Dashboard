@@ -64,3 +64,11 @@ Highest/Lowest Sales: <AGG(Min/Max Sales)>
 ```
 IF SUM([CY Sales]) < SUM([PY Sales]) THEN '⚫' ELSE '' END
 ```
+- Tooltip
+```
+Sub-Category:	<Sub-Category>
+Sales of <ATTR(Current Year)>:	<SUM(CY Sales)>
+Sales of  <ATTR(Previous Year)>:	<SUM(PY Sales)>
+% Diff Sales:	<AGG(% Diff Sales)>
+Profit of <ATTR(Current Year)>:	<SUM(CY Profit)>
+```
