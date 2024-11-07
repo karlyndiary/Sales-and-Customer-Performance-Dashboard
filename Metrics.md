@@ -57,19 +57,9 @@ Sales Differences: <AGG(% Diff Sales)>
 Highest/Lowest Sales: <AGG(Min/Max Sales)>
 ```
 
-### Total Profit
-- Current Year Profit
-```
-IF YEAR([Order Date]) = [Select Year] THEN [Profit] END
-```
-- Previous Year Profit
-```
-IF YEAR([Order Date]) = [Select Year] - 1 THEN [Profit] END
-```
-- % Difference Profit
-```
-(SUM([CY Profit]) - SUM([PY Profit])) / SUM([PY Profit])
-```
+#### Repeat for Profit and Quantity
+
+### Sub-Category Comparison
 - KPI CY Sales less than PY Sales
 ```
 IF SUM([CY Sales]) < SUM([PY Sales]) THEN '⚫' ELSE '' END
