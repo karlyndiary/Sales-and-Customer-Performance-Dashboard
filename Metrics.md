@@ -86,7 +86,7 @@ ELSE 'Below' END
 - Tooltip
 ```
 No of Week:	<WEEK(Order Date)>
-Sales of <ATTR(Current Year)>:	<ATTR(Current Year)>
+Sales of <ATTR(Current Year)>:	<SUM(CY Sales)>
 <AGG(KPI Sales AVG)> the average
 Profit of <ATTR(Current Year)>:	<SUM(CY Profit)>
 <AGG(KPI Profit Avg)> the average
