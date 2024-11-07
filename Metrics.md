@@ -70,3 +70,7 @@ IF YEAR([Order Date]) = [Select Year] - 1 THEN [Profit] END
 ```
 (SUM([CY Profit]) - SUM([PY Profit])) / SUM([PY Profit])
 ```
+- KPI CY Sales less than PY Sales
+```
+IF SUM([CY Sales]) < SUM([PY Sales]) THEN '⚫' ELSE '' END
+```
