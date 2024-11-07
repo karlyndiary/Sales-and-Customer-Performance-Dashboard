@@ -44,5 +44,25 @@ Allow users to filter data by product information like category and subcategory 
 - Rename tables
 - Replace the data type of region in the location table with country/region
 
+## Calculated Fields 
+- Order Date (Year)
+```
+YEAR([Order Date])
+```
+- Parameter to select year
+  - Data Type: Integer
+  - Current value: Recent year from the data source
+  - Add values from Order Date (Year) - The calculated Field
+  - List to display all years
+  - Display Format: Remove Thousand separators and decimals
+- Current Year Sales
+```
+IF YEAR([Order Date]) = [Select Year] THEN [Sales] END
+```
+- Previous Year Sales
+```
+IF YEAR([Order Date]) = [Select Year] - 1 THEN [Sales] END
+```
+
 ## Reference 
 - [Data with Baraa](https://www.datawithbaraa.com/tableau/tableau-sales-project-thank-you/) 
