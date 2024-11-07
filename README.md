@@ -83,7 +83,26 @@ END
 
 Under All in the Marks pane: Change the SUM([CY Sales]) to {SUM([CY Sales])} and [% Diff Sales] to {[% Diff Sales]} to return from revenue range to total revenue for the selected year
 
--
+- Current Year
+```
+[Select Year]
+```
+- Previous Year
+```
+[Select Year] - 1
+```
+
+Convert both to dimension
+
+Tooltip
+```
+Sales of <MONTH(Order Date)>, <ATTR(Current Year)>: <SUM(CY Sales)>
+Sales of <MONTH(Order Date)>, <ATTR(Previous Year)>: <SUM(PY Sales)>
+Sales Differences: <AGG(% Diff Sales)>
+Highest/Lowest Sales: <AGG(Min/Max Sales)>
+```
+
+
 
 ## Reference 
 - [Data with Baraa](https://www.datawithbaraa.com/tableau/tableau-sales-project-thank-you/) 
