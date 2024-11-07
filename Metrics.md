@@ -72,3 +72,22 @@ Sales of  <ATTR(Previous Year)>:	<SUM(PY Sales)>
 % Diff Sales:	<AGG(% Diff Sales)>
 Profit of <ATTR(Current Year)>:	<SUM(CY Profit)>
 ```
+### Weekly Trends for Sales & Profit
+- Current Year Sales
+```
+IF SUM([CY Sales]) > WINDOW_AVG(SUM([CY Sales])) THEN 'Above'
+ELSE 'Below' END
+```
+- Current Year Profit
+```
+IF SUM([CY Profit]) > WINDOW_AVG(SUM([CY Profit])) THEN 'Above'
+ELSE 'Below' END
+```
+- Tooltip
+```
+No of Week:	<WEEK(Order Date)>
+Sales of <ATTR(Current Year)>:	<ATTR(Current Year)>
+<AGG(KPI Sales AVG)> the average
+Profit of <ATTR(Current Year)>:	<SUM(CY Profit)>
+<AGG(KPI Profit Avg)> the average
+```
