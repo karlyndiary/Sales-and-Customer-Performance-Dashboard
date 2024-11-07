@@ -58,3 +58,11 @@ Highest/Lowest Sales: <AGG(Min/Max Sales)>
 ```
 
 ### Total Profit
+- Current Year Profit
+```
+IF YEAR([Order Date]) = [Select Year] THEN [Profit] END
+```
+- Previous Year Profit
+```
+IF YEAR([Order Date]) = [Select Year] - 1 THEN [Profit] END
+```
