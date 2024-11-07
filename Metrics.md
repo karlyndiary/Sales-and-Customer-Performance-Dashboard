@@ -62,7 +62,7 @@ Highest/Lowest Sales: <AGG(Min/Max Sales)>
 ### Sub-Category Comparison
 - KPI CY Sales less than PY Sales
 ```
-IF SUM([CY Sales]) < SUM([PY Sales]) THEN '⚫' ELSE '' END
+IF SUM([CY Sales]) < SUM([PY Sales]) THEN '⬤' ELSE '' END
 ```
 - Tooltip
 ```
