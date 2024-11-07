@@ -63,6 +63,12 @@ IF YEAR([Order Date]) = [Select Year] THEN [Sales] END
 ```
 IF YEAR([Order Date]) = [Select Year] - 1 THEN [Sales] END
 ```
+- % Difference Sales
+```
+(SUM([CY Sales]) - SUM([PY Sales]))/SUM([PY Sales])
+```
+Change to percent -> Right-click on the calculated field -> Default Properties -> Number Format -> Percentage -> Remove Decimals -> OK
+- 
 
 ## Reference 
 - [Data with Baraa](https://www.datawithbaraa.com/tableau/tableau-sales-project-thank-you/) 
