@@ -66,3 +66,7 @@ IF YEAR([Order Date]) = [Select Year] THEN [Profit] END
 ```
 IF YEAR([Order Date]) = [Select Year] - 1 THEN [Profit] END
 ```
+- % Difference Profit
+```
+(SUM([CY Profit]) - SUM([PY Profit])) / SUM([PY Profit])
+```
