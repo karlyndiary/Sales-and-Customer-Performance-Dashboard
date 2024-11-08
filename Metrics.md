@@ -91,3 +91,8 @@ Sales of <ATTR(Current Year)>:	<SUM(CY Sales)>
 Profit of <ATTR(Current Year)>:	<SUM(CY Profit)>
 <AGG(KPI Profit Avg)> the average
 ```
+## Customer Dashboard
+- CY Sales per Customer
+```
+SUM([CY Sales]) / COUNTD([CY Customers])
+```
