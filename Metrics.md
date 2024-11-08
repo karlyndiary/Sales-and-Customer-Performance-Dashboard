@@ -96,3 +96,12 @@ Profit of <ATTR(Current Year)>:	<SUM(CY Profit)>
 ```
 SUM([CY Sales]) / COUNTD([CY Customers])
 ```
+- Customer Distribution
+  - No of Orders per Customer
+  ```
+  {FIXED [Customer ID] : COUNTD([CY Orders])}
+  ```
+
+  Convert to Dimension
+
+  
