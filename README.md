@@ -41,12 +41,5 @@ Represent the distribution of customers based on the number of orders they have 
 #### Data Filters
 Allow users to filter data by product information like category and subcategory and by location information like region, state and city.
 
-## Data Cleaning
-- Rename tables
-- Replace the data type of region in the location table with country/region
-
-
-
-
 ## Reference 
 - [Data with Baraa](https://www.datawithbaraa.com/tableau/tableau-sales-project-thank-you/) 
