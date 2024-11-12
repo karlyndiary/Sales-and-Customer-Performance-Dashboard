@@ -7,10 +7,10 @@
 * [Recommendations](#recommendations)
 
 # Project Background 
-The objective of this project is to develop two interactive Tableau dashboards designed to empower sales managers and executives with in-depth insights into sales performance and customer behavior. These dashboards will highlight key metrics such as monthly and weekly sales trends, product sub-category performance, and the number of orders per customer (e.g., 200 customers each placing 1 order), enabling stakeholders to uncover valuable insights that can inform strategies, optimize sales, and enhance customer satisfaction across regions.
+The objective of this project is to develop two interactive Tableau dashboards designed to empower sales managers and executives with in-depth insights into sales performance and customer behaviour. These dashboards will highlight key metrics such as monthly and weekly sales trends, product sub-category performance, and order frequency, enabling stakeholders to uncover valuable insights that can inform strategies, optimize sales, and enhance customer satisfaction across regions.
 
 Insights and recommendations are provided on the following key areas : 
-- **Total Sales, Profit & Quantity**: Evaluation of historical sales patterns, by comparing both current year and previous year, focusing on Total Sales, Profit & Quantity.
+- **Total Sales, Profit & Quantity**: Evaluation of historical sales patterns, by comparing both the current and the previous year, focusing on Total Sales, Profit & Quantity.
 
 - **Sub-Category Level Performance**: An analysis of sub-categories, understanding their impact on sales and profits of both the current year and previous year.
 
