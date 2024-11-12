@@ -1,3 +1,7 @@
+## Data Cleaning
+- Rename tables
+- Replace the data type of region in the location table with country/region
+
 ## Calculated Fields 
 ### Total Sales
 - Order Date (Year)
