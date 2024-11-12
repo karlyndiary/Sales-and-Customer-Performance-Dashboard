@@ -61,7 +61,7 @@ Sales Differences: <AGG(% Diff Sales)>
 Highest/Lowest Sales: <AGG(Min/Max Sales)>
 ```
 
-#### _Repeat for Profit and Quantity
+#### _Repeat for Profit and Quantity_
 
 ### Sub-Category Comparison
 - KPI CY Sales < than PY Sales
