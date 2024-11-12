@@ -3,7 +3,7 @@
 - Replace the data type of region in the location table with country/region
 
 ## Calculated Fields 
-### Total Sales
+### Total Sales KPI
 - Order Date (Year)
 ```
 YEAR([Order Date])
@@ -61,10 +61,10 @@ Sales Differences: <AGG(% Diff Sales)>
 Highest/Lowest Sales: <AGG(Min/Max Sales)>
 ```
 
-#### Repeat for Profit and Quantity
+#### _Repeat for Profit and Quantity
 
 ### Sub-Category Comparison
-- KPI CY Sales less than PY Sales
+- KPI CY Sales < than PY Sales
 ```
 IF SUM([CY Sales]) < SUM([PY Sales]) THEN '⬤' ELSE '' END
 ```
@@ -76,13 +76,14 @@ Sales of  <ATTR(Previous Year)>:	<SUM(PY Sales)>
 % Diff Sales:	<AGG(% Diff Sales)>
 Profit of <ATTR(Current Year)>:	<SUM(CY Profit)>
 ```
+
 ### Weekly Trends for Sales & Profit
-- Current Year Sales
+- KPI Sales AVG
 ```
 IF SUM([CY Sales]) > WINDOW_AVG(SUM([CY Sales])) THEN 'Above'
 ELSE 'Below' END
 ```
-- Current Year Profit
+- KPI Profit AVG
 ```
 IF SUM([CY Profit]) > WINDOW_AVG(SUM([CY Profit])) THEN 'Above'
 ELSE 'Below' END
@@ -95,17 +96,65 @@ Sales of <ATTR(Current Year)>:	<SUM(CY Sales)>
 Profit of <ATTR(Current Year)>:	<SUM(CY Profit)>
 <AGG(KPI Profit Avg)> the average
 ```
-## Customer Dashboard
+
+### Total Sales per Customer KPI 
 - CY Sales per Customer
 ```
 SUM([CY Sales]) / COUNTD([CY Customers])
 ```
-- Customer Distribution
-  - No of Orders per Customer
-  ```
-  {FIXED [Customer ID] : COUNTD([CY Orders])}
-  ```
 
-  Convert to Dimension
+- PY Sales per Customer
+```
+SUM([PY Sales]) / COUNTD([PY Customers])
+```
 
-  
+- % Diff Sales per Customer
+```
+([CY Sales per Customer] - [PY Sales per Customer]) / [PY Sales per Customer]
+```
+
+Change to percent -> Right-click on the calculated field -> Default Properties -> Number Format -> Percentage -> Remove Decimals -> OK
+
+Format the % Diff Sales per Customer -> Right-click -> Format -> ▲0.00%; ▼-0.00%;
+
+- Min/Max Sales per Customer
+```
+IF [CY Sales per Customer] = WINDOW_MAX([CY Sales per Customer])
+THEN [CY Sales per Customer] 
+ELSEIF [CY Sales per Customer] = WINDOW_MIN([CY Sales per Customer])
+THEN [CY Sales per Customer]
+END
+```
+
+Under All in the Marks pane: Change the SUM([CY Sales per Customer]) to {SUM([CY Sales per Customer])} and [% Diff Sales per Customer] to {[% Diff Sales per Customer]} to return from revenue range to total sales per customer for the selected year
+
+### Total Orders KPI
+- % Diff Orders
+```
+(COUNTD([CY Orders]) - COUNTD([PY Orders])) / COUNTD([PY Orders])
+```
+
+Change to percent -> Right-click on the calculated field -> Default Properties -> Number Format -> Percentage -> Remove Decimals -> OK
+
+Format the % Diff Orders -> Right-click -> Format -> ▲0.00%; ▼-0.00%;
+
+- Min/Max Orders
+```
+IF COUNTD([CY Orders]) = WINDOW_MAX(COUNTD([CY Orders]))
+THEN COUNTD([CY Orders])
+ELSEIF COUNTD([CY Orders]) = WINDOW_MIN(COUNTD([CY Orders]))
+THEN COUNTD([CY Orders])
+END
+```
+
+Under All in the Marks pane: Change the SUM([CY Orders]) to {SUM([CY Orders])} and [% Diff Orders] to {[% Diff Orders]} to return from orders range to total orders for the selected year
+
+#### _Repeat for Total Customers KPI_
+
+### Customer Distribution
+- No of Orders per Customer
+```
+{FIXED [Customer ID] : COUNTD([CY Orders])}
+```
+
+Convert to Dimension
