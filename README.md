@@ -1,4 +1,5 @@
 # Sales & Customer Performance Dashboard
+![Sales   Customer ER Diagram](https://github.com/user-attachments/assets/513a148f-4670-40a5-9415-b1328f20e47f)
 
 ## Introduction
 This user story outlines the specifications for building two dashboards using Tableau to help stakeholders, including sales managers and executives to analyze sales performance and customers. 
