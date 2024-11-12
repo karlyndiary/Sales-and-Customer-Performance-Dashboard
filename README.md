@@ -10,17 +10,17 @@
 The objective of this project is to develop two interactive Tableau dashboards designed to empower sales managers and executives with in-depth insights into sales performance and customer behaviour. These dashboards will highlight key metrics such as monthly and weekly sales trends, product sub-category performance, and order frequency, enabling stakeholders to uncover valuable insights that can inform strategies, optimize sales, and enhance customer satisfaction across regions.
 
 Insights and recommendations are provided on the following key areas : 
-- **Total Sales, Profit & Quantity**: Evaluation of historical sales patterns, by comparing both the current and the previous year, focusing on Total Sales, Profit & Quantity.
+- **Total Sales, Profit & Quantity Analysis**: A comparative evaluation of historical sales trends, focusing on Total Sales, Profit, and Quantity, by analyzing both the current and previous year’s performance.
 
-- **Sub-Category Level Performance**: An analysis of sub-categories, understanding their impact on sales and profits of both the current year and previous year.
+- **Sub-Category Performance Analysis**: A detailed assessment of product sub-categories, examining their contributions to sales and profits for both the current and previous year.
 
-- **Sales & Profit Trends over time**: An assessment of the sales and profit over time.
+- **Sales & Profit Trends Over Time**: A comprehensive analysis of sales and profit trends over time, highlighting key fluctuations and patterns.
 
-- **Total Customers, Sales per Customer & Total Orders**: Evaluation of historical sales patterns, by comparing both current year and previous year, focusing on Total Customers, Sales per Customer & Total Orders.
+- **Customer Metrics Analysis**: An evaluation of Total Customers, Sales per Customer, and Total Orders, with a comparison of the current and previous year’s data to assess customer engagement and purchasing behavior.
 
-- **Customer Distribution by No of Orders**: The analysis identifies the no of customer Distribution by no of orders.
+- **Customer Distribution by Order Frequency**: An analysis of customer distribution based on the number of orders placed, providing insights into purchasing patterns and engagement levels.
 
-- **Top 10 Customers by Profit**: Details of the top 10 most profitable customers
+- **Top 10 Customers by Profit**: A detailed breakdown of the top 10 most profitable customers, showcasing their contribution to overall business profitability.
 
 Detailed Resources: 
 
