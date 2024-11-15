@@ -1,5 +1,7 @@
 # Sales & Customer Performance Dashboard
 
+![Sales   Customer Dashboard](https://github.com/user-attachments/assets/f0e99b11-0bd1-4ce0-859a-61025d5f9cf2)
+
 # Table of Contents
 * [Project Background](#project-background)
 * [Data Structure](#data-structure)
